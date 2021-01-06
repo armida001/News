@@ -1,12 +1,20 @@
 //
-//  LoginViewController.swift
+//  CatalogViewController.swift
 //  News
-//
-//  Created by 1 on 30.11.2020.
 //
 
 import UIKit
 
 class CatalogViewController: UITableViewController, Storyboarded {    
     var coordinator: CatalogCoordinator?
+    var dataSource: CatalogDataSource = CatalogDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.delegate = dataSource
+        self.tableView.dataSource = dataSource
+        self.dataSource.startParser { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }

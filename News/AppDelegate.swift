@@ -2,8 +2,6 @@
 //  AppDelegate.swift
 //  News
 //
-//  Created by 1 on 03.01.2021.
-//
 
 import UIKit
 import CoreData
@@ -11,12 +9,19 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    var tabBarController: MainTabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let parser: RSSParser = RSSParser()
-        parser.startParse()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        // swiftlint:disable:next force_cast
+        tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController
+        
+        window?.rootViewController = tabBarController
+        
+        tabBarController?.handle(launchOptions)
         return true
     }
 

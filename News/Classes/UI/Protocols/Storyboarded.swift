@@ -2,8 +2,6 @@
 //  Storyboarded.swift
 //  News
 //
-//  Created by 1 on 30.12.2020.
-//
 
 import UIKit
 
@@ -16,7 +14,7 @@ extension Storyboarded where Self: UIViewController {
     static func instantiate(_ storyboardName: String = "Main") -> Self {
         let storyboardIdentifier = String(describing: self)
         let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main)
-
+        
         // swiftlint:disable:next force_cast
         return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as! Self
     }

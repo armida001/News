@@ -9,16 +9,19 @@ import Foundation
 
 class NewsItem: NSObject {
     var id: String
-    var resource: String
+    var author: String
     var title: String
     var detail: String
     var imageURL: URL?
+    var link: URL?
+    var date: Date = Date()
+    var resourceId: Int = 0
     
     override init() {
         id = ""
-        resource = ""
         title = ""
         detail = ""
+        author = ""
     }
 }
 

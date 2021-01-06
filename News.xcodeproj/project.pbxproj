@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		11DA99BF481C660B7A114425 /* Pods_CommonPods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75733EEDE5AC523692743374 /* Pods_CommonPods_News.framework */; };
+		63AF2C0125A4BEF500B9EC97 /* ResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0025A4BEF500B9EC97 /* ResourceItem.swift */; };
+		63AF2C0625A5A71800B9EC97 /* CatalogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */; };
+		63AF2C0E25A5A81800B9EC97 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */; };
+		63AF2C1325A5A9C000B9EC97 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */; };
 		63DBD28325A1FFDC00BD4E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD28225A1FFDC00BD4E66 /* AppDelegate.swift */; };
 		63DBD28525A1FFDC00BD4E66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD28425A1FFDC00BD4E66 /* SceneDelegate.swift */; };
 		63DBD28A25A1FFDC00BD4E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBD28825A1FFDC00BD4E66 /* Main.storyboard */; };
@@ -46,33 +50,17 @@
 		63DBD32E25A2003400BD4E66 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2E125A2003400BD4E66 /* DateExtension.swift */; };
 		63DBD32F25A2003400BD4E66 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2E225A2003400BD4E66 /* TableViewExtension.swift */; };
 		63DBD33125A2003400BD4E66 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBD2E725A2003400BD4E66 /* News.storyboard */; };
-		63DBD33225A2003400BD4E66 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBD2E825A2003400BD4E66 /* Signin.storyboard */; };
 		63DBD33325A2003400BD4E66 /* CatalogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EA25A2003400BD4E66 /* CatalogCoordinator.swift */; };
 		63DBD33425A2003400BD4E66 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EB25A2003400BD4E66 /* CatalogViewController.swift */; };
 		63DBD33525A2003400BD4E66 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2ED25A2003400BD4E66 /* ProfileCoordinator.swift */; };
 		63DBD33625A2003400BD4E66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EE25A2003400BD4E66 /* ProfileViewController.swift */; };
-		63DBD33725A2003400BD4E66 /* MaterialTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DBD2F125A2003400BD4E66 /* MaterialTextField.xib */; };
-		63DBD33825A2003400BD4E66 /* CommonMasksAndValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F325A2003400BD4E66 /* CommonMasksAndValidators.swift */; };
-		63DBD33925A2003400BD4E66 /* TextMaskingAndValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F425A2003400BD4E66 /* TextMaskingAndValidation.swift */; };
-		63DBD33A25A2003400BD4E66 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F525A2003400BD4E66 /* Formatting.swift */; };
-		63DBD33B25A2003400BD4E66 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F625A2003400BD4E66 /* MaterialTextField.swift */; };
-		63DBD33C25A2003400BD4E66 /* FMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F725A2003400BD4E66 /* FMTextField.swift */; };
-		63DBD33D25A2003400BD4E66 /* RxUITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F825A2003400BD4E66 /* RxUITextFieldDelegate.swift */; };
-		63DBD33E25A2003400BD4E66 /* VSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2F925A2003400BD4E66 /* VSTextField.swift */; };
 		63DBD33F25A2003400BD4E66 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2FB25A2003400BD4E66 /* Storyboarded.swift */; };
 		63DBD34025A2003400BD4E66 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2FC25A2003400BD4E66 /* Coordinator.swift */; };
-		63DBD34125A2003400BD4E66 /* LoginBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2FE25A2003400BD4E66 /* LoginBaseViewController.swift */; };
-		63DBD34225A2003400BD4E66 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2FF25A2003400BD4E66 /* LoginCoordinator.swift */; };
-		63DBD34325A2003400BD4E66 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30025A2003400BD4E66 /* RestoreViewController.swift */; };
-		63DBD34425A2003400BD4E66 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30125A2003400BD4E66 /* ProfileEditViewController.swift */; };
-		63DBD34525A2003400BD4E66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30225A2003400BD4E66 /* LoginViewController.swift */; };
-		63DBD34625A2003400BD4E66 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30325A2003400BD4E66 /* RegistrationViewController.swift */; };
 		63DBD34725A2003400BD4E66 /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30525A2003400BD4E66 /* CoordinatedNavigationController.swift */; };
 		63DBD34825A2003400BD4E66 /* SSRestApiTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30725A2003400BD4E66 /* SSRestApiTransport.swift */; };
 		63DBD34925A2003400BD4E66 /* SSDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30825A2003400BD4E66 /* SSDAO.swift */; };
 		63DBD34A25A2003400BD4E66 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30925A2003400BD4E66 /* MainTabBarController.swift */; };
 		63DBD34B25A2003400BD4E66 /* EntityStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30C25A2003400BD4E66 /* EntityStatus.swift */; };
-		63DBD34C25A2003400BD4E66 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30D25A2003400BD4E66 /* CellModel.swift */; };
 		63DBD34D25A2003400BD4E66 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30E25A2003400BD4E66 /* Session.swift */; };
 		63DBD34E25A2003400BD4E66 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD30F25A2003400BD4E66 /* Token.swift */; };
 		63DBD34F25A2003400BD4E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD31125A2003400BD4E66 /* ViewController.swift */; };
@@ -102,6 +90,10 @@
 
 /* Begin PBXFileReference section */
 		371BF03CB8D47E7714A94D50 /* Pods-CommonPods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonPods-News.release.xcconfig"; path = "Target Support Files/Pods-CommonPods-News/Pods-CommonPods-News.release.xcconfig"; sourceTree = "<group>"; };
+		63AF2C0025A4BEF500B9EC97 /* ResourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItem.swift; sourceTree = "<group>"; };
+		63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataSource.swift; sourceTree = "<group>"; };
+		63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		63DBD27F25A1FFDC00BD4E66 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DBD28225A1FFDC00BD4E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63DBD28425A1FFDC00BD4E66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,33 +138,17 @@
 		63DBD2E125A2003400BD4E66 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		63DBD2E225A2003400BD4E66 /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		63DBD2E725A2003400BD4E66 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
-		63DBD2E825A2003400BD4E66 /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		63DBD2EA25A2003400BD4E66 /* CatalogCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCoordinator.swift; sourceTree = "<group>"; };
 		63DBD2EB25A2003400BD4E66 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		63DBD2ED25A2003400BD4E66 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		63DBD2EE25A2003400BD4E66 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		63DBD2F125A2003400BD4E66 /* MaterialTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaterialTextField.xib; sourceTree = "<group>"; };
-		63DBD2F325A2003400BD4E66 /* CommonMasksAndValidators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonMasksAndValidators.swift; sourceTree = "<group>"; };
-		63DBD2F425A2003400BD4E66 /* TextMaskingAndValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMaskingAndValidation.swift; sourceTree = "<group>"; };
-		63DBD2F525A2003400BD4E66 /* Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
-		63DBD2F625A2003400BD4E66 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
-		63DBD2F725A2003400BD4E66 /* FMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMTextField.swift; sourceTree = "<group>"; };
-		63DBD2F825A2003400BD4E66 /* RxUITextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxUITextFieldDelegate.swift; sourceTree = "<group>"; };
-		63DBD2F925A2003400BD4E66 /* VSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSTextField.swift; sourceTree = "<group>"; };
 		63DBD2FB25A2003400BD4E66 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		63DBD2FC25A2003400BD4E66 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		63DBD2FE25A2003400BD4E66 /* LoginBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBaseViewController.swift; sourceTree = "<group>"; };
-		63DBD2FF25A2003400BD4E66 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		63DBD30025A2003400BD4E66 /* RestoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
-		63DBD30125A2003400BD4E66 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
-		63DBD30225A2003400BD4E66 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		63DBD30325A2003400BD4E66 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		63DBD30525A2003400BD4E66 /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
 		63DBD30725A2003400BD4E66 /* SSRestApiTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRestApiTransport.swift; sourceTree = "<group>"; };
 		63DBD30825A2003400BD4E66 /* SSDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDAO.swift; sourceTree = "<group>"; };
 		63DBD30925A2003400BD4E66 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		63DBD30C25A2003400BD4E66 /* EntityStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityStatus.swift; sourceTree = "<group>"; };
-		63DBD30D25A2003400BD4E66 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		63DBD30E25A2003400BD4E66 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		63DBD30F25A2003400BD4E66 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		63DBD31125A2003400BD4E66 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +309,7 @@
 				63DBD2CA25A2003400BD4E66 /* Entity */,
 				63DBD2CC25A2003400BD4E66 /* Transformation */,
 				63DBD2CF25A2003400BD4E66 /* Error */,
+				63AF2C0025A4BEF500B9EC97 /* ResourceItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,7 +404,6 @@
 				63DBD2EC25A2003400BD4E66 /* Profile */,
 				63DBD2EF25A2003400BD4E66 /* CustomViews */,
 				63DBD2FA25A2003400BD4E66 /* Protocols */,
-				63DBD2FD25A2003400BD4E66 /* Login */,
 				63DBD30425A2003400BD4E66 /* Base */,
 			);
 			path = UI;
@@ -437,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				63DBD2E725A2003400BD4E66 /* News.storyboard */,
-				63DBD2E825A2003400BD4E66 /* Signin.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -447,6 +422,8 @@
 			children = (
 				63DBD2EA25A2003400BD4E66 /* CatalogCoordinator.swift */,
 				63DBD2EB25A2003400BD4E66 /* CatalogViewController.swift */,
+				63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */,
+				63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -463,32 +440,8 @@
 		63DBD2EF25A2003400BD4E66 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				63DBD2F025A2003400BD4E66 /* TextField */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		63DBD2F025A2003400BD4E66 /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				63DBD2F125A2003400BD4E66 /* MaterialTextField.xib */,
-				63DBD2F225A2003400BD4E66 /* MaskingAndValidation */,
-				63DBD2F625A2003400BD4E66 /* MaterialTextField.swift */,
-				63DBD2F725A2003400BD4E66 /* FMTextField.swift */,
-				63DBD2F825A2003400BD4E66 /* RxUITextFieldDelegate.swift */,
-				63DBD2F925A2003400BD4E66 /* VSTextField.swift */,
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
-		63DBD2F225A2003400BD4E66 /* MaskingAndValidation */ = {
-			isa = PBXGroup;
-			children = (
-				63DBD2F325A2003400BD4E66 /* CommonMasksAndValidators.swift */,
-				63DBD2F425A2003400BD4E66 /* TextMaskingAndValidation.swift */,
-				63DBD2F525A2003400BD4E66 /* Formatting.swift */,
-			);
-			path = MaskingAndValidation;
 			sourceTree = "<group>";
 		};
 		63DBD2FA25A2003400BD4E66 /* Protocols */ = {
@@ -498,19 +451,6 @@
 				63DBD2FC25A2003400BD4E66 /* Coordinator.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		63DBD2FD25A2003400BD4E66 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				63DBD2FE25A2003400BD4E66 /* LoginBaseViewController.swift */,
-				63DBD2FF25A2003400BD4E66 /* LoginCoordinator.swift */,
-				63DBD30025A2003400BD4E66 /* RestoreViewController.swift */,
-				63DBD30125A2003400BD4E66 /* ProfileEditViewController.swift */,
-				63DBD30225A2003400BD4E66 /* LoginViewController.swift */,
-				63DBD30325A2003400BD4E66 /* RegistrationViewController.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		63DBD30425A2003400BD4E66 /* Base */ = {
@@ -546,7 +486,6 @@
 			isa = PBXGroup;
 			children = (
 				63DBD30C25A2003400BD4E66 /* EntityStatus.swift */,
-				63DBD30D25A2003400BD4E66 /* CellModel.swift */,
 				63DBD30E25A2003400BD4E66 /* Session.swift */,
 				63DBD30F25A2003400BD4E66 /* Token.swift */,
 			);
@@ -556,6 +495,7 @@
 		63DBD31025A2003400BD4E66 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */,
 				63DBD31125A2003400BD4E66 /* ViewController.swift */,
 				63DBD31225A2003400BD4E66 /* DataExtension.swift */,
 			);
@@ -684,8 +624,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DBD33225A2003400BD4E66 /* Signin.storyboard in Resources */,
-				63DBD33725A2003400BD4E66 /* MaterialTextField.xib in Resources */,
 				63DBD29225A1FFDF00BD4E66 /* LaunchScreen.storyboard in Resources */,
 				63DBD33125A2003400BD4E66 /* News.storyboard in Resources */,
 				63DBD28F25A1FFDF00BD4E66 /* Assets.xcassets in Resources */,
@@ -761,11 +699,11 @@
 				63DBD31525A2003400BD4E66 /* DAO.swift in Sources */,
 				63DBD31E25A2003400BD4E66 /* RealmMapper.swift in Sources */,
 				63DBD31425A2003400BD4E66 /* RestApiTransport.swift in Sources */,
+				63AF2C0625A5A71800B9EC97 /* CatalogDataSource.swift in Sources */,
 				63DBD31F25A2003400BD4E66 /* AppError.swift in Sources */,
 				63DBD32025A2003400BD4E66 /* Service.swift in Sources */,
 				63DBD35025A2003400BD4E66 /* DataExtension.swift in Sources */,
 				63DBD31C25A2003400BD4E66 /* DAOObject.swift in Sources */,
-				63DBD33C25A2003400BD4E66 /* FMTextField.swift in Sources */,
 				63DBD32625A2003400BD4E66 /* TimeIntervalExtension.swift in Sources */,
 				63DBD35A25A2013800BD4E66 /* GlobalDefinition.swift in Sources */,
 				63DBD34A25A2003400BD4E66 /* MainTabBarController.swift in Sources */,
@@ -774,10 +712,12 @@
 				63DBD31825A2003400BD4E66 /* TextFieldEmptyValidator.swift in Sources */,
 				63DBD32C25A2003400BD4E66 /* UserDefaultsExtension.swift in Sources */,
 				63DBD32725A2003400BD4E66 /* UIStackViewExtension.swift in Sources */,
+				63AF2C1325A5A9C000B9EC97 /* UIImageExtension.swift in Sources */,
 				63DBD32B25A2003400BD4E66 /* StringExtension.swift in Sources */,
 				63DBD37C25A2084A00BD4E66 /* RSSParser.swift in Sources */,
 				63DBD34D25A2003400BD4E66 /* Session.swift in Sources */,
 				63DBD38425A21D6400BD4E66 /* NewsItem.swift in Sources */,
+				63AF2C0125A4BEF500B9EC97 /* ResourceItem.swift in Sources */,
 				63DBD33525A2003400BD4E66 /* ProfileCoordinator.swift in Sources */,
 				63DBD32125A2003400BD4E66 /* ConstraintsExtension.swift in Sources */,
 				63DBD32225A2003400BD4E66 /* NSObjectExtension.swift in Sources */,
@@ -790,35 +730,23 @@
 				63DBD31925A2003400BD4E66 /* View.swift in Sources */,
 				63DBD31D25A2003400BD4E66 /* Entity.swift in Sources */,
 				63DBD31B25A2003400BD4E66 /* ViewBinding.swift in Sources */,
+				63AF2C0E25A5A81800B9EC97 /* NewsCell.swift in Sources */,
 				63DBD32925A2003400BD4E66 /* AsyncOperations.swift in Sources */,
 				63DBD32325A2003400BD4E66 /* ArrayExtension.swift in Sources */,
 				63DBD32525A2003400BD4E66 /* UIViewExtension.swift in Sources */,
-				63DBD34625A2003400BD4E66 /* RegistrationViewController.swift in Sources */,
-				63DBD34525A2003400BD4E66 /* LoginViewController.swift in Sources */,
-				63DBD34225A2003400BD4E66 /* LoginCoordinator.swift in Sources */,
 				63DBD34925A2003400BD4E66 /* SSDAO.swift in Sources */,
-				63DBD33E25A2003400BD4E66 /* VSTextField.swift in Sources */,
 				63DBD32F25A2003400BD4E66 /* TableViewExtension.swift in Sources */,
 				63DBD33F25A2003400BD4E66 /* Storyboarded.swift in Sources */,
-				63DBD33A25A2003400BD4E66 /* Formatting.swift in Sources */,
-				63DBD34C25A2003400BD4E66 /* CellModel.swift in Sources */,
-				63DBD34125A2003400BD4E66 /* LoginBaseViewController.swift in Sources */,
-				63DBD34325A2003400BD4E66 /* RestoreViewController.swift in Sources */,
 				63DBD34825A2003400BD4E66 /* SSRestApiTransport.swift in Sources */,
 				63DBD33325A2003400BD4E66 /* CatalogCoordinator.swift in Sources */,
-				63DBD33825A2003400BD4E66 /* CommonMasksAndValidators.swift in Sources */,
-				63DBD33B25A2003400BD4E66 /* MaterialTextField.swift in Sources */,
 				63DBD31A25A2003400BD4E66 /* ViewModel.swift in Sources */,
 				63DBD32425A2003400BD4E66 /* UILabelExtension.swift in Sources */,
 				63DBD34E25A2003400BD4E66 /* Token.swift in Sources */,
-				63DBD33925A2003400BD4E66 /* TextMaskingAndValidation.swift in Sources */,
 				63DBD34025A2003400BD4E66 /* Coordinator.swift in Sources */,
 				63DBD32A25A2003400BD4E66 /* UIDeviceExtension.swift in Sources */,
 				63DBD33625A2003400BD4E66 /* ProfileViewController.swift in Sources */,
 				63DBD34F25A2003400BD4E66 /* ViewController.swift in Sources */,
 				63DBD38925A21E1600BD4E66 /* CellItem.swift in Sources */,
-				63DBD34425A2003400BD4E66 /* ProfileEditViewController.swift in Sources */,
-				63DBD33D25A2003400BD4E66 /* RxUITextFieldDelegate.swift in Sources */,
 				63DBD28525A1FFDC00BD4E66 /* SceneDelegate.swift in Sources */,
 				63DBD32825A2003400BD4E66 /* ColorExtension.swift in Sources */,
 			);

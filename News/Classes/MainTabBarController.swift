@@ -2,29 +2,20 @@
 //  MainTabBarController.swift
 //  Unwrap
 //
-//  Created by Paul Hudson on 09/08/2018.
-//  Copyright © 2019 Hacking with Swift.
-//
 
 import UIKit
 
 /// A UITabBarController subclass that sets up our main coordinators as each of the five app tabs.
 class MainTabBarController: UITabBarController, Storyboarded {
     var storyboardName: String = "Main"
-    let login = LoginCoordinator()
+//    let login = LoginCoordinator()
     let catalog = CatalogCoordinator()
-    let profile = ProfileCoordinator()
+//    let profile = ProfileCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [catalog.splitViewController, profile.splitViewController]
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        catalog.loginCoordinator = login
-        catalog.firstLoadIfNeed()
+        viewControllers = [catalog.navigationController]//, profile.splitViewController]
     }
     
     /// If we get some launch options, figure out which one was requested and jump right to the correct tab.
