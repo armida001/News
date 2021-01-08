@@ -7,11 +7,13 @@ import Foundation
 import FeedKit
 
 class RSSParser: NSObject {
-    let resource = ResourceItem.init()
-    var parser: FeedParser
+    let resource: ResourceItem = GlobalDefinition.shared.resourceItems.first!
+    var parser: FeedParser?
     
     override init() {
-        parser = FeedParser(URL: URL.init(string: resource.url) ?? URL(string: GlobalDefinition.lentaRSSHost)!)
+        if let resURL = resource.url {
+            parser = FeedParser(URL: resURL)
+        }
     }
     
     private func loadFeed(resource: ResourceItem, data: Data, completion: @escaping (Swift.Result<[NewsItem], NewsItemLoadingError>) -> Void) {
@@ -77,7 +79,10 @@ class RSSParser: NSObject {
     }
     
     func startParse(completion: @escaping (Swift.Result<[NewsItem], NewsItemLoadingError>) -> Void) {
-        let req = URLRequest(url: URL.init(string: resource.url) ?? URL(string: GlobalDefinition.lentaRSSHost)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 60)
+        
+        guard let url = resource.url else { return }
+        
+        let req = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 60)
         let dataTask = URLSession.shared.dataTask(with: req) { data, response, error in
             if error == nil {
                 DispatchQueue.main.async {

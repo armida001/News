@@ -10,12 +10,12 @@ class MainTabBarController: UITabBarController, Storyboarded {
     var storyboardName: String = "Main"
 //    let login = LoginCoordinator()
     let catalog = CatalogCoordinator()
-//    let profile = ProfileCoordinator()
+    let settings = SettingsCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [catalog.navigationController]//, profile.splitViewController]
+        viewControllers = [catalog.navigationController, settings.navigationController]
     }
     
     /// If we get some launch options, figure out which one was requested and jump right to the correct tab.

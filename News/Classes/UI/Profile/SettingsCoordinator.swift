@@ -8,7 +8,7 @@ import UIKit
 class SettingsCoordinator: Coordinator {
     var splitViewController = UISplitViewController()
     var navigationController: CoordinatedNavigationController
-    var storyboardName: String = "Settings"
+    var storyboardName: String = "News"
     
     init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController()) {
         self.navigationController = navigationController
