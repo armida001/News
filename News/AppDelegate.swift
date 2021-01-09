@@ -22,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         
         tabBarController?.handle(launchOptions)
+        if let array = (UserDefaults.getCustomObject(forKey: UserDefaultsKeys.selectedResources) as? [ResourceItem]) {
+            GlobalDefinition.shared.resourceItems = array
+        } else {
+            GlobalDefinition.shared.resourceItems = [ResourceItem.init(url: "http://lenta.ru/rss"), ResourceItem.init(url: "http://www.gazeta.ru/export/rss/lenta.xml")]
+            UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
+        }
         return true
     }
 
@@ -39,6 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func applicationWillResignActive(_ application: UIApplication) {
+        UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
+    }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

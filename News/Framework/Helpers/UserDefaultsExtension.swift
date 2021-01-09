@@ -9,14 +9,12 @@
 import Foundation
 
 enum UserDefaultsKeys: String {
-    case deviceId = "device_id"
+    case deviceId = "update_interval"
+    case selectedResources = "selected_resources"
 }
 
 extension UserDefaults {
     static func shared() -> UserDefaults {
-        if let ud = UserDefaults.init(suiteName: "group.com.simbirsoft.giftclub") {            
-            return ud
-        }
         return UserDefaults.standard
     }
 

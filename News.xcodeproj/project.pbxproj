@@ -13,6 +13,7 @@
 		638D859125A88C76001D96FD /* ResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D859025A88C76001D96FD /* ResourceItem.swift */; };
 		638D859925A8A0EE001D96FD /* ResourceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D859825A8A0EE001D96FD /* ResourceHeader.swift */; };
 		638D859E25A8DAAE001D96FD /* AutoUpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D859D25A8DAAE001D96FD /* AutoUpdateCell.swift */; };
+		638D85A325A9BCB2001D96FD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D85A225A9BCB1001D96FD /* Colors.xcassets */; };
 		63AF2C0625A5A71800B9EC97 /* CatalogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */; };
 		63AF2C0E25A5A81800B9EC97 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */; };
 		63AF2C1325A5A9C000B9EC97 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */; };
@@ -99,6 +100,7 @@
 		638D859025A88C76001D96FD /* ResourceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceItem.swift; sourceTree = "<group>"; };
 		638D859825A8A0EE001D96FD /* ResourceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceHeader.swift; sourceTree = "<group>"; };
 		638D859D25A8DAAE001D96FD /* AutoUpdateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoUpdateCell.swift; sourceTree = "<group>"; };
+		638D85A225A9BCB1001D96FD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataSource.swift; sourceTree = "<group>"; };
 		63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		63DBD28125A1FFDC00BD4E66 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				638D85A225A9BCB1001D96FD /* Colors.xcassets */,
 				63DBD2E325A2003400BD4E66 /* Classes */,
 				63DBD2B825A2003400BD4E66 /* Framework */,
 				63DBD28225A1FFDC00BD4E66 /* AppDelegate.swift */,
@@ -636,6 +639,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638D85A325A9BCB2001D96FD /* Colors.xcassets in Resources */,
 				63DBD29225A1FFDF00BD4E66 /* LaunchScreen.storyboard in Resources */,
 				63DBD33125A2003400BD4E66 /* News.storyboard in Resources */,
 				63DBD28F25A1FFDF00BD4E66 /* Assets.xcassets in Resources */,

@@ -17,6 +17,10 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     var showIntervalAlert: (()->Void)?
     var showAddResourceAlert: (()->Void)?
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section != SectionType.autoUpdate.rawValue {
             return 60
@@ -35,6 +39,10 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         return UIView.init(frame: CGRect.zero)
     }
     
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView.init(frame: CGRect.zero)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -48,31 +56,38 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == SectionType.autoUpdate.rawValue {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AutoUpdateCell", for: indexPath) as? AutoUpdateCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AutoUpdateCell.reusedId, for: indexPath) as? AutoUpdateCell else {
                 return UITableViewCell()
             }
             cell.configure(interval)
             return cell
         }
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ResourceCell", for: indexPath) as? ResourceCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ResourceCell.reusedId, for: indexPath) as? ResourceCell else {
             return UITableViewCell()
         }
-        cell.configure(resourcesArray[indexPath.row])
-        cell.accessoryType = .none
+        cell.configure(resourcesArray[indexPath.row])        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath), indexPath.section != SectionType.autoUpdate.rawValue {
+        if let cell = tableView.cellForRow(at: indexPath) as? ResourceCell {
             cell.accessoryType = .none
+            if let resource = cell.item {
+                cell.item?.isActive = false
+                GlobalDefinition.shared.resourceItems.first(where: {$0.hashId == resource.hashId})?.isActive = false
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == SectionType.autoUpdate.rawValue {
             self.showIntervalAlert?()
-        } else if let cell = tableView.cellForRow(at: indexPath)  {
+        } else if let cell = tableView.cellForRow(at: indexPath) as? ResourceCell {
             cell.accessoryType = .checkmark
+            if let resource = cell.item {
+                cell.item?.isActive = true
+                GlobalDefinition.shared.resourceItems.first(where: {$0.hashId == resource.hashId})?.isActive = true
+            }
         }
     }
 }

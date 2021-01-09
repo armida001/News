@@ -55,4 +55,9 @@ class SettingsViewController: UITableViewController, Storyboarded {
         }))
         self.present(alert, animated: true)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
+    }
 }

@@ -28,12 +28,11 @@ extension Date {
         return Calendar.current.range(of: .day, in: .month, for: components.date ?? Date())?.count ?? 0
     }
     
-//    static func defaultShortFormatString(from date: Date) -> String {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = R.string.localizable.jivo_dateFormat.localized()
-//        formatter.locale = GlobalDefinitions.currentLocale
-//        return formatter.string(from: date)
-//    }
+    static func defaultFormatString(from date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.mm.yyyy HH:MM"
+        return formatter.string(from: date)
+    }
 //    
 //    static func shotFormatString(from date: Date) -> String {
 //        let formatter = DateFormatter()

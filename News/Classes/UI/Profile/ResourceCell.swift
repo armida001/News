@@ -8,6 +8,7 @@ import UIKit
 import Kingfisher
 
 class ResourceCell: UITableViewCell {
+    static let reusedId = "ResourceCell"
     var item: ResourceItem?
     
     func configure(_ item: Any) {
@@ -15,6 +16,7 @@ class ResourceCell: UITableViewCell {
         if let nItem = self.item {
             self.textLabel?.text = nItem.url?.absoluteString ?? ""
             self.textLabel?.adjustsFontSizeToFitWidth = true
+            self.accessoryType = nItem.isActive ? .checkmark : .none
         }
     }
 }

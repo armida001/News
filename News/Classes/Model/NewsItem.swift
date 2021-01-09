@@ -15,7 +15,7 @@ class NewsItem: NSObject {
     var imageURL: URL?
     var link: URL?
     var date: Date = Date()
-    var resourceId: Int = 0
+    var resource: ResourceItem?
     
     override init() {
         id = ""

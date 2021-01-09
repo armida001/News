@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CatalogViewController: UITableViewController, Storyboarded {    
+class CatalogViewController: UITableViewController, Storyboarded {
     var coordinator: CatalogCoordinator?
     var dataSource: CatalogDataSource = CatalogDataSource()
     
@@ -16,5 +16,14 @@ class CatalogViewController: UITableViewController, Storyboarded {
         self.dataSource.startParser { [weak self] in
             self?.tableView.reloadData()
         }
+        self.view.backgroundColor = UIColor.white
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+    }
+    
+    @objc func refresh(sender: AnyObject) {
+        dataSource.startParser {
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+        }        
     }
 }
