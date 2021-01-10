@@ -26,6 +26,21 @@ enum AutoUpdateInterval: Int {
             return "Выкл."
         }
     }
+    
+    func needUpdate(lastDate: Date) -> Bool {
+        print(lastDate.distance(to: Date()))
+        let dayTime: Double = 24 * 60 * 60
+        switch self {
+        case .everyDay:
+            return lastDate.distance(to: Date()) > dayTime
+        case .everyWeek:
+            return lastDate.distance(to: Date()) > dayTime * 7
+        case .everyMonth:
+            return lastDate.distance(to: Date()) > dayTime * 30
+        default:
+            return false
+        }
+    }
 }
 
 class AutoUpdateCell: UITableViewCell {

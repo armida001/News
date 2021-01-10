@@ -44,6 +44,8 @@ class SettingsViewController: UITableViewController, Storyboarded {
                 self.tableView.selectRow(at: IndexPath.init(row: index, section: 1), animated: false, scrollPosition: UITableView.ScrollPosition.none)
             }
         }
+        
+        dataSource.interval = UserDefaults.getIntervalType()
     }
     
     func showIntervalAlert() {
@@ -52,6 +54,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
             guard let autoUpdateItem = AutoUpdateInterval.init(rawValue: i) else { break }
             alert.addAction(UIAlertAction.init(title: autoUpdateItem.title(), style: UIAlertAction.Style.default, handler: { [weak self] (action) in
                 self?.dataSource.interval = autoUpdateItem
+                UserDefaults.setCustomObject(autoUpdateItem.rawValue, forKey: UserDefaultsKeys.updateInterval)
                 self?.tableView.reloadData()
                 alert.dismiss(animated: true, completion: nil)
             }))

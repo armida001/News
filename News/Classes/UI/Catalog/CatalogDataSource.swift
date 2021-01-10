@@ -50,6 +50,7 @@ class CatalogDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
                 self?.newsArray.sort(by: { (item, item2) -> Bool in
                     item.date > item2.date
                 })
+                UserDefaults.setCustomObject(Date().timeIntervalSince1970, forKey: UserDefaultsKeys.lastUpdate)
                 completion()
             } catch let error  as NSError {
                 print(error)

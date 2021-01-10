@@ -9,7 +9,8 @@
 import Foundation
 
 enum UserDefaultsKeys: String {
-    case deviceId = "update_interval"
+    case updateInterval = "update_interval"
+    case lastUpdate = "last_update"
     case selectedResources = "selected_resources"
 }
 
@@ -52,5 +53,13 @@ extension UserDefaults {
     
     static func bool(forKey key: UserDefaultsKeys) -> Bool {
         return UserDefaults.standard.bool(forKey: key.rawValue)
-    }    
+    }
+    
+    static func getIntervalType() -> AutoUpdateInterval {
+        if let intervalTypeConstant = UserDefaults.getCustomObject(forKey: UserDefaultsKeys.updateInterval) as? Int,
+           let intervalType = AutoUpdateInterval.init(rawValue: intervalTypeConstant) {
+            return intervalType
+        }
+        return AutoUpdateInterval.none
+    }
 }
