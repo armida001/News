@@ -9,19 +9,15 @@ import FeedKit
 class RSSParser: NSObject {
     private func loadFeed(resource: ResourceItem, data: Data, completion: @escaping (Swift.Result<[NewsItem], NewsItemLoadingError>) -> Void) {
         let parser = FeedParser(data: data)
-        print(resource.url)
         parser.parseAsync { parseResult in
             let result: Swift.Result<[NewsItem], NewsItemLoadingError>
             do {
                 switch parseResult {
-                case .atom(let atom):
-                    result = try .success(self.convert(atom: atom))
-                    break
                 case .rss(let rss):
                     result = try .success(self.convert(rss: rss, resource: resource))
-                case .json(_): fatalError()
                 case .failure(let e):
                     result = .failure(.feedParsingError(e))
+                default: fatalError()
                 }
             } catch let e as NewsItemLoadingError {
                 result = .failure(e)
@@ -52,22 +48,6 @@ class RSSParser: NSObject {
             }
         }
         return result
-    }
-    
-    private func convert(atom: AtomFeed) throws -> [NewsItem] {
-        guard let name = atom.title else { throw NewsItemLoadingError.missingAttribute("title")  }
-        
-        let detail = atom.subtitle?.value ?? ""
-        
-        guard let logoURL = atom.logo.flatMap(URL.init) else {
-            throw NewsItemLoadingError.missingAttribute("logo")
-        }
-        
-        let p = NewsItem()
-        p.title = name
-        p.imageURL = logoURL
-        p.detail = detail
-        return [p]
     }
     
     func startParse(completion: @escaping (Swift.Result<[NewsItem], NewsItemLoadingError>) -> Void) {

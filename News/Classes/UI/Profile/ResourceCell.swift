@@ -17,6 +17,7 @@ class ResourceCell: UITableViewCell {
             self.textLabel?.text = nItem.url?.absoluteString ?? ""
             self.textLabel?.adjustsFontSizeToFitWidth = true
             self.accessoryType = nItem.isActive ? .checkmark : .none
+//            self.isSelected = nItem.isActive
         }
     }
 }

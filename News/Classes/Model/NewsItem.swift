@@ -16,7 +16,8 @@ class NewsItem: NSObject {
     var link: URL?
     var date: Date = Date()
     var resource: ResourceItem?
-    
+    var readed: Bool = false
+    var opened: Bool = false
     override init() {
         id = ""
         title = ""

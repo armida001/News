@@ -17,6 +17,7 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     var showIntervalAlert: (()->Void)?
     var showAddResourceAlert: (()->Void)?
     
+    //MARK: UITableViewDelegate methods
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }

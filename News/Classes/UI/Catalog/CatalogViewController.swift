@@ -13,9 +13,7 @@ class CatalogViewController: UITableViewController, Storyboarded {
         super.viewDidLoad()
         self.tableView.delegate = dataSource
         self.tableView.dataSource = dataSource
-        self.dataSource.startParser { [weak self] in
-            self?.tableView.reloadData()
-        }
+        self.refresh(sender: self)
         self.view.backgroundColor = UIColor.white
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
     }
@@ -25,5 +23,10 @@ class CatalogViewController: UITableViewController, Storyboarded {
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refresh(sender: self)
     }
 }

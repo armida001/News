@@ -30,7 +30,7 @@ extension Date {
     
     static func defaultFormatString(from date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.mm.yyyy HH:MM"
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
         return formatter.string(from: date)
     }
 //    

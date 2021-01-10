@@ -5,20 +5,20 @@
 
 import UIKit
 
-/// A UITabBarController subclass that sets up our main coordinators as each of the five app tabs.
 class MainTabBarController: UITabBarController, Storyboarded {
     var storyboardName: String = "Main"
-//    let login = LoginCoordinator()
     let catalog = CatalogCoordinator()
     let settings = SettingsCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewControllers = [catalog.navigationController, settings.navigationController]
+        if let items = self.tabBar.items, items.count > 1 {
+            catalog.navigationController.tabBarItem = items.first
+            settings.navigationController.tabBarItem = items[1]
+        }
+        viewControllers = [catalog.navigationController, settings.navigationController]        
     }
     
-    /// If we get some launch options, figure out which one was requested and jump right to the correct tab.
     func handle(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         if let item = launchOptions?[.shortcutItem] as? UIApplicationShortcutItem {
             handle(shortcutItem: item)

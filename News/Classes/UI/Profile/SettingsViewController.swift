@@ -38,6 +38,12 @@ class SettingsViewController: UITableViewController, Storyboarded {
         dataSource.showIntervalAlert = self.showIntervalAlert
         dataSource.showAddResourceAlert = self.showAddResourceAlert
         self.navigationController?.navigationBar.largeContentTitle = "Настройки"
+        
+        for (index,resource) in dataSource.resourcesArray.enumerated() {
+            if resource.isActive {
+                self.tableView.selectRow(at: IndexPath.init(row: index, section: 1), animated: false, scrollPosition: UITableView.ScrollPosition.none)
+            }
+        }
     }
     
     func showIntervalAlert() {

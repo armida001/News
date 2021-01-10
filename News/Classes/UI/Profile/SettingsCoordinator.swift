@@ -15,12 +15,7 @@ class SettingsCoordinator: Coordinator {
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.coordinator = self
         
-        self.baseVC()
-    }
-    
-    func baseVC() {
         let viewController = SettingsViewController.instantiate(storyboardName)
-        viewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(contentsOfFile: "Settings"), tag: 1)
         viewController.coordinator = self
         navigationController.viewControllers = [viewController]
     }
