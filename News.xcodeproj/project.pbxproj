@@ -42,6 +42,7 @@
 		63DBD35A25A2013800BD4E66 /* GlobalDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD35925A2013800BD4E66 /* GlobalDefinition.swift */; };
 		63DBD37C25A2084A00BD4E66 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD37B25A2084A00BD4E66 /* RSSParser.swift */; };
 		63DBD38425A21D6400BD4E66 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD38325A21D6400BD4E66 /* NewsItem.swift */; };
+		63F557B525AC334F00E229F6 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F557B425AC334E00E229F6 /* UIAlertControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		63DBD35925A2013800BD4E66 /* GlobalDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDefinition.swift; sourceTree = "<group>"; };
 		63DBD37B25A2084A00BD4E66 /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
 		63DBD38325A21D6400BD4E66 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		63F557B425AC334E00E229F6 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		75733EEDE5AC523692743374 /* Pods_CommonPods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonPods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E0255CC8EB4819B03E36E1 /* Pods-CommonPods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonPods-News.debug.xcconfig"; path = "Target Support Files/Pods-CommonPods-News/Pods-CommonPods-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -289,6 +291,7 @@
 				63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */,
 				63DBD31125A2003400BD4E66 /* ViewController.swift */,
 				63DBD31225A2003400BD4E66 /* DataExtension.swift */,
+				63F557B425AC334E00E229F6 /* UIAlertControllerExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				63DBD33525A2003400BD4E66 /* SettingsCoordinator.swift in Sources */,
 				638D858C25A88B69001D96FD /* ResourceCell.swift in Sources */,
 				63DBD28325A1FFDC00BD4E66 /* AppDelegate.swift in Sources */,
+				63F557B525AC334F00E229F6 /* UIAlertControllerExtension.swift in Sources */,
 				638D858B25A88B69001D96FD /* SettingsDataSource.swift in Sources */,
 				63DBD34725A2003400BD4E66 /* CoordinatedNavigationController.swift in Sources */,
 				638D859925A8A0EE001D96FD /* ResourceHeader.swift in Sources */,

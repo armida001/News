@@ -93,4 +93,14 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if indexPath.section == SectionType.resource.rawValue {            
+            self.resourcesArray.remove(at: indexPath.row)
+            GlobalDefinition.shared.resourceItems.remove(at: indexPath.row)
+            UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
+            UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
+            tableView.reloadData()
+        }
+    }
 }
