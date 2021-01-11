@@ -53,6 +53,7 @@ enum AutoUpdateInterval: Int {
 
 class AutoUpdateCell: UITableViewCell {
     static let reusedId: String = "AutoUpdateCell"
+    
     func configure(_ item: Any) {
         if let intervalType = item as? AutoUpdateInterval {
             self.detailTextLabel?.text = intervalType.title()

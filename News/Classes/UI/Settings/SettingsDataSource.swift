@@ -66,7 +66,7 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ResourceCell.reusedId, for: indexPath) as? ResourceCell else {
             return UITableViewCell()
         }
-        cell.configure(resourcesArray[indexPath.row])        
+        cell.configure(resourcesArray[indexPath.row])
         return cell
     }
     
@@ -94,13 +94,21 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if indexPath.section == SectionType.resource.rawValue {            
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.section == SectionType.resource.rawValue
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title:  "Удалить", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             self.resourcesArray.remove(at: indexPath.row)
             GlobalDefinition.shared.resourceItems.remove(at: indexPath.row)
             UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
             UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
             tableView.reloadData()
-        }
+            success(true)
+        })
+        deleteAction.backgroundColor = .red
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }

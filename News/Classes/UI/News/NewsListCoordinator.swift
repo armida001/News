@@ -6,7 +6,6 @@
 import UIKit
 
 class NewsListCoordinator: Coordinator {
-    var splitViewController = UISplitViewController()
     var navigationController: CoordinatedNavigationController
     var storyboardName: String = "News"
     
