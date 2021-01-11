@@ -20,13 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController
         
         window?.rootViewController = tabBarController
-        
-        //TODO: test
+                
         UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
         if let array = (UserDefaults.getCustomObject(forKey: UserDefaultsKeys.selectedResources) as? [ResourceItem]) {
             GlobalDefinition.shared.resourceItems = array
         } else {
-            GlobalDefinition.shared.resourceItems = [ResourceItem.init(url: "http://lenta.ru/rss"), ResourceItem.init(url: "http://www.gazeta.ru/export/rss/lenta.xml")]
+            //default resources
+            let baseResource = ResourceItem.init(url: "http://lenta.ru/rss")
+            baseResource.isActive = true
+            let baseResource2 = ResourceItem.init(url: "http://www.gazeta.ru/export/rss/lenta.xml")
+            GlobalDefinition.shared.resourceItems = [baseResource, baseResource2]
             UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
         }
         return true
