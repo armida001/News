@@ -5,9 +5,9 @@
 
 import UIKit
 
-class CatalogViewController: UITableViewController, Storyboarded {
-    var coordinator: CatalogCoordinator?
-    var dataSource: CatalogDataSource = CatalogDataSource()
+class NewsListViewController: UITableViewController, Storyboarded {
+    var coordinator: NewsListCoordinator?
+    var dataSource: NewsListDataSource = NewsListDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,10 @@ class CatalogViewController: UITableViewController, Storyboarded {
         self.tableView.dataSource = dataSource
         self.view.backgroundColor = UIColor.white
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
-        autoUpdateIfNeed()
+        let intervalType = UserDefaults.getIntervalType()
+        if intervalType != AutoUpdateInterval.none {
+            refresh(sender: self)
+        }
     }
     
     func autoUpdateIfNeed() {
@@ -25,12 +28,14 @@ class CatalogViewController: UITableViewController, Storyboarded {
         if lastUpdateDate == nil {
             refresh(sender: self)
         } else
-        if intervalType != AutoUpdateInterval.none, intervalType.needUpdate(lastDate: lastUpdateDate!) {
+        if intervalType != AutoUpdateInterval.none, let lastUpdateDate = UserDefaults.getCustomObject(forKey: UserDefaultsKeys.lastUpdate) as? Date, intervalType.needUpdate(lastDate: lastUpdateDate) {
             refresh(sender: self)
         }
     }
     
     @objc func refresh(sender: AnyObject) {
+        dataSource.newsArray.removeAll()
+        self.tableView.reloadData()
         dataSource.startParser {
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()

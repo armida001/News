@@ -14,7 +14,7 @@
 		638D859925A8A0EE001D96FD /* ResourceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D859825A8A0EE001D96FD /* ResourceHeader.swift */; };
 		638D859E25A8DAAE001D96FD /* AutoUpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D859D25A8DAAE001D96FD /* AutoUpdateCell.swift */; };
 		638D85A325A9BCB2001D96FD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D85A225A9BCB1001D96FD /* Colors.xcassets */; };
-		63AF2C0625A5A71800B9EC97 /* CatalogDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */; };
+		63AF2C0625A5A71800B9EC97 /* NewsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0525A5A71800B9EC97 /* NewsListDataSource.swift */; };
 		63AF2C0E25A5A81800B9EC97 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */; };
 		63AF2C1325A5A9C000B9EC97 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */; };
 		63DBD28325A1FFDC00BD4E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD28225A1FFDC00BD4E66 /* AppDelegate.swift */; };
@@ -55,8 +55,8 @@
 		63DBD32E25A2003400BD4E66 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2E125A2003400BD4E66 /* DateExtension.swift */; };
 		63DBD32F25A2003400BD4E66 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2E225A2003400BD4E66 /* TableViewExtension.swift */; };
 		63DBD33125A2003400BD4E66 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBD2E725A2003400BD4E66 /* News.storyboard */; };
-		63DBD33325A2003400BD4E66 /* CatalogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EA25A2003400BD4E66 /* CatalogCoordinator.swift */; };
-		63DBD33425A2003400BD4E66 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EB25A2003400BD4E66 /* CatalogViewController.swift */; };
+		63DBD33325A2003400BD4E66 /* NewsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EA25A2003400BD4E66 /* NewsListCoordinator.swift */; };
+		63DBD33425A2003400BD4E66 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EB25A2003400BD4E66 /* NewsListViewController.swift */; };
 		63DBD33525A2003400BD4E66 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2ED25A2003400BD4E66 /* SettingsCoordinator.swift */; };
 		63DBD33625A2003400BD4E66 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2EE25A2003400BD4E66 /* SettingsViewController.swift */; };
 		63DBD33F25A2003400BD4E66 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD2FB25A2003400BD4E66 /* Storyboarded.swift */; };
@@ -101,7 +101,7 @@
 		638D859825A8A0EE001D96FD /* ResourceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceHeader.swift; sourceTree = "<group>"; };
 		638D859D25A8DAAE001D96FD /* AutoUpdateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoUpdateCell.swift; sourceTree = "<group>"; };
 		638D85A225A9BCB1001D96FD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDataSource.swift; sourceTree = "<group>"; };
+		63AF2C0525A5A71800B9EC97 /* NewsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListDataSource.swift; sourceTree = "<group>"; };
 		63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		63AF2C1225A5A9C000B9EC97 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		63DBD27F25A1FFDC00BD4E66 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,8 +148,8 @@
 		63DBD2E125A2003400BD4E66 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		63DBD2E225A2003400BD4E66 /* TableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		63DBD2E725A2003400BD4E66 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
-		63DBD2EA25A2003400BD4E66 /* CatalogCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogCoordinator.swift; sourceTree = "<group>"; };
-		63DBD2EB25A2003400BD4E66 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		63DBD2EA25A2003400BD4E66 /* NewsListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListCoordinator.swift; sourceTree = "<group>"; };
+		63DBD2EB25A2003400BD4E66 /* NewsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		63DBD2ED25A2003400BD4E66 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		63DBD2EE25A2003400BD4E66 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		63DBD2FB25A2003400BD4E66 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -430,9 +430,9 @@
 		63DBD2E925A2003400BD4E66 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				63DBD2EA25A2003400BD4E66 /* CatalogCoordinator.swift */,
-				63DBD2EB25A2003400BD4E66 /* CatalogViewController.swift */,
-				63AF2C0525A5A71800B9EC97 /* CatalogDataSource.swift */,
+				63DBD2EA25A2003400BD4E66 /* NewsListCoordinator.swift */,
+				63DBD2EB25A2003400BD4E66 /* NewsListViewController.swift */,
+				63AF2C0525A5A71800B9EC97 /* NewsListDataSource.swift */,
 				63AF2C0D25A5A81800B9EC97 /* NewsCell.swift */,
 			);
 			path = Catalog;
@@ -710,12 +710,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DBD33425A2003400BD4E66 /* CatalogViewController.swift in Sources */,
+				63DBD33425A2003400BD4E66 /* NewsListViewController.swift in Sources */,
 				63DBD31625A2003400BD4E66 /* Validator.swift in Sources */,
 				63DBD31525A2003400BD4E66 /* DAO.swift in Sources */,
 				63DBD31E25A2003400BD4E66 /* RealmMapper.swift in Sources */,
 				63DBD31425A2003400BD4E66 /* RestApiTransport.swift in Sources */,
-				63AF2C0625A5A71800B9EC97 /* CatalogDataSource.swift in Sources */,
+				63AF2C0625A5A71800B9EC97 /* NewsListDataSource.swift in Sources */,
 				63DBD31F25A2003400BD4E66 /* AppError.swift in Sources */,
 				63DBD32025A2003400BD4E66 /* Service.swift in Sources */,
 				63DBD35025A2003400BD4E66 /* DataExtension.swift in Sources */,
@@ -757,7 +757,7 @@
 				63DBD33F25A2003400BD4E66 /* Storyboarded.swift in Sources */,
 				63DBD34825A2003400BD4E66 /* SSRestApiTransport.swift in Sources */,
 				638D859E25A8DAAE001D96FD /* AutoUpdateCell.swift in Sources */,
-				63DBD33325A2003400BD4E66 /* CatalogCoordinator.swift in Sources */,
+				63DBD33325A2003400BD4E66 /* NewsListCoordinator.swift in Sources */,
 				63DBD31A25A2003400BD4E66 /* ViewModel.swift in Sources */,
 				63DBD32425A2003400BD4E66 /* UILabelExtension.swift in Sources */,
 				63DBD34E25A2003400BD4E66 /* Token.swift in Sources */,

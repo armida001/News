@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class SettingsViewController: UITableViewController, Storyboarded {
     var coordinator: SettingsCoordinator?

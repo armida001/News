@@ -7,7 +7,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController, Storyboarded {
     var storyboardName: String = "Main"
-    let catalog = CatalogCoordinator()
+    let catalog = NewsListCoordinator()
     let settings = SettingsCoordinator()
 
     override func viewDidLoad() {

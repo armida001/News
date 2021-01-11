@@ -5,8 +5,9 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
-class CatalogDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
+class NewsListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     var newsArray: [NewsItem] = [NewsItem]()
     
     //MARK: UITableViewDelegate methods
@@ -46,9 +47,15 @@ class CatalogDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
         let parser: RSSParser = RSSParser()
         parser.startParse(completion: { [weak self] (response) in
             do {
-                self?.newsArray = try response.get()
-                self?.newsArray.sort(by: { (item, item2) -> Bool in
-                    item.date > item2.date
+                guard let `self` = self else { return }
+                let resultArray = try response.get()
+                for item in resultArray {
+                    if !self.newsArray.contains(where: {$0.link == item.link}) {
+                        self.newsArray.append(item)
+                    }
+                }
+                self.newsArray.sort(by: { (item, item2) -> Bool in
+                    return item.date > item2.date
                 })
                 UserDefaults.setCustomObject(Date().timeIntervalSince1970, forKey: UserDefaultsKeys.lastUpdate)
                 completion()

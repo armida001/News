@@ -76,6 +76,7 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
             if let resource = cell.item {
                 cell.item?.isActive = false
                 GlobalDefinition.shared.resourceItems.first(where: {$0.hashId == resource.hashId})?.isActive = false
+                UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
             }
         }
     }
@@ -88,6 +89,7 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
             if let resource = cell.item {
                 cell.item?.isActive = true
                 GlobalDefinition.shared.resourceItems.first(where: {$0.hashId == resource.hashId})?.isActive = true
+                UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
             }
         }
     }

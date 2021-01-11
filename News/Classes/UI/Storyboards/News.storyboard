@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Каталог-->
+        <!--Новости-->
         <scene sceneID="9oI-vD-Y97">
             <objects>
-                <tableViewController storyboardIdentifier="CatalogViewController" title="Каталог" id="8He-As-qwZ" customClass="CatalogViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NewsListViewController" title="Новости" id="8He-As-qwZ" customClass="NewsListViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" estimatedRowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="SkN-lV-djb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

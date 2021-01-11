@@ -28,17 +28,26 @@ enum AutoUpdateInterval: Int {
     }
     
     func needUpdate(lastDate: Date) -> Bool {
-        print(lastDate.distance(to: Date()))
+        let interval: Double = timeInterval()
+        switch self {
+        case .everyDay, .everyWeek, .everyMonth:
+            return lastDate.distance(to: Date()) > interval        
+        default:
+            return false
+        }
+    }
+    
+    func timeInterval() -> TimeInterval {
         let dayTime: Double = 24 * 60 * 60
         switch self {
         case .everyDay:
-            return lastDate.distance(to: Date()) > dayTime
+            return dayTime
         case .everyWeek:
-            return lastDate.distance(to: Date()) > dayTime * 7
+            return dayTime * 7
         case .everyMonth:
-            return lastDate.distance(to: Date()) > dayTime * 30
+            return dayTime * 30
         default:
-            return false
+            return 0
         }
     }
 }
