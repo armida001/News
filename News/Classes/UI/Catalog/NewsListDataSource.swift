@@ -45,6 +45,7 @@ class NewsListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     //MARK: common methods
     func startParser(completion: @escaping (()->Void)) {
         let parser: RSSParser = RSSParser()
+        SSDAO.init().deleteNews()
         parser.startParse(completion: { [weak self] (response) in
             do {
                 guard let `self` = self else { return }
@@ -52,11 +53,13 @@ class NewsListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
                 for item in resultArray {
                     if !self.newsArray.contains(where: {$0.link == item.link}) {
                         self.newsArray.append(item)
+                        SSDAO.init().saveNews([item])
                     }
                 }
                 self.newsArray.sort(by: { (item, item2) -> Bool in
                     return item.date > item2.date
                 })
+                
                 UserDefaults.setCustomObject(Date().timeIntervalSince1970, forKey: UserDefaultsKeys.lastUpdate)
                 completion()
             } catch let error  as NSError {

@@ -7,11 +7,12 @@ import Foundation
 
 class ResourceItem: NSObject, NSCoding {
     var url: URL?
-    var hashId: Int {
-        get {
-            return url?.absoluteString.hash ?? 0
-        }
-    }
+    var hashId: Int = 0
+//    {
+//        get {
+//            return url?.absoluteString.hash ?? 0
+//        }
+//    }
     var isActive: Bool = false
     
     init(url: String) {

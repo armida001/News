@@ -43,6 +43,16 @@
 		63DBD37C25A2084A00BD4E66 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD37B25A2084A00BD4E66 /* RSSParser.swift */; };
 		63DBD38425A21D6400BD4E66 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBD38325A21D6400BD4E66 /* NewsItem.swift */; };
 		63F557B525AC334F00E229F6 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F557B425AC334E00E229F6 /* UIAlertControllerExtension.swift */; };
+		63F557FC25AC5B0A00E229F6 /* RealmResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F557F525AC5B0A00E229F6 /* RealmResourceItem.swift */; };
+		63F557FD25AC5B0A00E229F6 /* RealmNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F557F625AC5B0A00E229F6 /* RealmNews.swift */; };
+		63F557FE25AC5B0A00E229F6 /* NewsRealmMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F557F925AC5B0A00E229F6 /* NewsRealmMapper.swift */; };
+		63F5581625AC5C6B00E229F6 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5580A25AC5C6B00E229F6 /* DAO.swift */; };
+		63F5581725AC5C6B00E229F6 /* DAOObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5580D25AC5C6B00E229F6 /* DAOObject.swift */; };
+		63F5581825AC5C6B00E229F6 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5580F25AC5C6B00E229F6 /* Entity.swift */; };
+		63F5581925AC5C6B00E229F6 /* RealmMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5581225AC5C6B00E229F6 /* RealmMapper.swift */; };
+		63F5581A25AC5C6B00E229F6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5581425AC5C6B00E229F6 /* AppError.swift */; };
+		63F5582625AC5CEE00E229F6 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5582525AC5CEE00E229F6 /* NSObjectExtension.swift */; };
+		63F5582B25AC5D7000E229F6 /* SSDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F5582A25AC5D7000E229F6 /* SSDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +115,16 @@
 		63DBD37B25A2084A00BD4E66 /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
 		63DBD38325A21D6400BD4E66 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		63F557B425AC334E00E229F6 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		63F557F525AC5B0A00E229F6 /* RealmResourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmResourceItem.swift; sourceTree = "<group>"; };
+		63F557F625AC5B0A00E229F6 /* RealmNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNews.swift; sourceTree = "<group>"; };
+		63F557F925AC5B0A00E229F6 /* NewsRealmMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRealmMapper.swift; sourceTree = "<group>"; };
+		63F5580A25AC5C6B00E229F6 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		63F5580D25AC5C6B00E229F6 /* DAOObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAOObject.swift; sourceTree = "<group>"; };
+		63F5580F25AC5C6B00E229F6 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		63F5581225AC5C6B00E229F6 /* RealmMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMapper.swift; sourceTree = "<group>"; };
+		63F5581425AC5C6B00E229F6 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		63F5582525AC5CEE00E229F6 /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		63F5582A25AC5D7000E229F6 /* SSDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDAO.swift; sourceTree = "<group>"; };
 		75733EEDE5AC523692743374 /* Pods_CommonPods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonPods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E0255CC8EB4819B03E36E1 /* Pods-CommonPods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonPods-News.debug.xcconfig"; path = "Target Support Files/Pods-CommonPods-News/Pods-CommonPods-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +180,7 @@
 		63DBD28125A1FFDC00BD4E66 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				63F5580725AC5C6B00E229F6 /* Framework */,
 				638D85A225A9BCB1001D96FD /* Colors.xcassets */,
 				63DBD2E325A2003400BD4E66 /* Classes */,
 				63DBD28225A1FFDC00BD4E66 /* AppDelegate.swift */,
@@ -266,6 +287,7 @@
 		63DBD30625A2003400BD4E66 /* Transport */ = {
 			isa = PBXGroup;
 			children = (
+				63F5582A25AC5D7000E229F6 /* SSDAO.swift */,
 				63DBD37B25A2084A00BD4E66 /* RSSParser.swift */,
 				63DBD35925A2013800BD4E66 /* GlobalDefinition.swift */,
 			);
@@ -275,6 +297,8 @@
 		63DBD30A25A2003400BD4E66 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63F557F425AC5B0A00E229F6 /* DAOObject */,
+				63F557F725AC5B0A00E229F6 /* Transformation */,
 				63DBD38325A21D6400BD4E66 /* NewsItem.swift */,
 				638D859025A88C76001D96FD /* ResourceItem.swift */,
 			);
@@ -292,6 +316,108 @@
 				63DBD31125A2003400BD4E66 /* ViewController.swift */,
 				63DBD31225A2003400BD4E66 /* DataExtension.swift */,
 				63F557B425AC334E00E229F6 /* UIAlertControllerExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		63F557F425AC5B0A00E229F6 /* DAOObject */ = {
+			isa = PBXGroup;
+			children = (
+				63F557F525AC5B0A00E229F6 /* RealmResourceItem.swift */,
+				63F557F625AC5B0A00E229F6 /* RealmNews.swift */,
+			);
+			path = DAOObject;
+			sourceTree = "<group>";
+		};
+		63F557F725AC5B0A00E229F6 /* Transformation */ = {
+			isa = PBXGroup;
+			children = (
+				63F557F825AC5B0A00E229F6 /* RealmMapper */,
+			);
+			path = Transformation;
+			sourceTree = "<group>";
+		};
+		63F557F825AC5B0A00E229F6 /* RealmMapper */ = {
+			isa = PBXGroup;
+			children = (
+				63F557F925AC5B0A00E229F6 /* NewsRealmMapper.swift */,
+			);
+			path = RealmMapper;
+			sourceTree = "<group>";
+		};
+		63F5580725AC5C6B00E229F6 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				63F5582425AC5CEE00E229F6 /* Helpers */,
+				63F5580825AC5C6B00E229F6 /* Transport */,
+				63F5580B25AC5C6B00E229F6 /* Model */,
+			);
+			path = Framework;
+			sourceTree = SOURCE_ROOT;
+		};
+		63F5580825AC5C6B00E229F6 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				63F5580A25AC5C6B00E229F6 /* DAO.swift */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		63F5580B25AC5C6B00E229F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63F5580C25AC5C6B00E229F6 /* DAOModel */,
+				63F5580E25AC5C6B00E229F6 /* Entity */,
+				63F5581025AC5C6B00E229F6 /* Transformation */,
+				63F5581325AC5C6B00E229F6 /* Error */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63F5580C25AC5C6B00E229F6 /* DAOModel */ = {
+			isa = PBXGroup;
+			children = (
+				63F5580D25AC5C6B00E229F6 /* DAOObject.swift */,
+			);
+			path = DAOModel;
+			sourceTree = "<group>";
+		};
+		63F5580E25AC5C6B00E229F6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				63F5580F25AC5C6B00E229F6 /* Entity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		63F5581025AC5C6B00E229F6 /* Transformation */ = {
+			isa = PBXGroup;
+			children = (
+				63F5581125AC5C6B00E229F6 /* RealmMapper */,
+			);
+			path = Transformation;
+			sourceTree = "<group>";
+		};
+		63F5581125AC5C6B00E229F6 /* RealmMapper */ = {
+			isa = PBXGroup;
+			children = (
+				63F5581225AC5C6B00E229F6 /* RealmMapper.swift */,
+			);
+			path = RealmMapper;
+			sourceTree = "<group>";
+		};
+		63F5581325AC5C6B00E229F6 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				63F5581425AC5C6B00E229F6 /* AppError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		63F5582425AC5CEE00E229F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				63F5582525AC5CEE00E229F6 /* NSObjectExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -492,16 +618,26 @@
 				63DBD33425A2003400BD4E66 /* NewsListViewController.swift in Sources */,
 				63AF2C0625A5A71800B9EC97 /* NewsListDataSource.swift in Sources */,
 				63DBD35025A2003400BD4E66 /* DataExtension.swift in Sources */,
+				63F557FE25AC5B0A00E229F6 /* NewsRealmMapper.swift in Sources */,
 				63DBD35A25A2013800BD4E66 /* GlobalDefinition.swift in Sources */,
 				63DBD34A25A2003400BD4E66 /* MainTabBarController.swift in Sources */,
+				63F5581925AC5C6B00E229F6 /* RealmMapper.swift in Sources */,
 				63DBD32E25A2003400BD4E66 /* DateExtension.swift in Sources */,
 				63DBD32C25A2003400BD4E66 /* UserDefaultsExtension.swift in Sources */,
 				63AF2C1325A5A9C000B9EC97 /* UIImageExtension.swift in Sources */,
+				63F5581A25AC5C6B00E229F6 /* AppError.swift in Sources */,
 				63DBD37C25A2084A00BD4E66 /* RSSParser.swift in Sources */,
+				63F5582625AC5CEE00E229F6 /* NSObjectExtension.swift in Sources */,
+				63F5581625AC5C6B00E229F6 /* DAO.swift in Sources */,
+				63F557FC25AC5B0A00E229F6 /* RealmResourceItem.swift in Sources */,
+				63F557FD25AC5B0A00E229F6 /* RealmNews.swift in Sources */,
 				63DBD38425A21D6400BD4E66 /* NewsItem.swift in Sources */,
+				63F5581825AC5C6B00E229F6 /* Entity.swift in Sources */,
 				63DBD33525A2003400BD4E66 /* SettingsCoordinator.swift in Sources */,
+				63F5581725AC5C6B00E229F6 /* DAOObject.swift in Sources */,
 				638D858C25A88B69001D96FD /* ResourceCell.swift in Sources */,
 				63DBD28325A1FFDC00BD4E66 /* AppDelegate.swift in Sources */,
+				63F5582B25AC5D7000E229F6 /* SSDAO.swift in Sources */,
 				63F557B525AC334F00E229F6 /* UIAlertControllerExtension.swift in Sources */,
 				638D858B25A88B69001D96FD /* SettingsDataSource.swift in Sources */,
 				63DBD34725A2003400BD4E66 /* CoordinatedNavigationController.swift in Sources */,

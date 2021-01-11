@@ -6,7 +6,12 @@
 import Foundation
 
 class NewsItem: NSObject {
-    var id: String
+    @objc dynamic var id: Int = 0
+//    {
+//        get {
+//            return link?.absoluteString.hashValue ?? 0
+//        }
+//    }
     var author: String
     var title: String
     var detail: String
@@ -17,7 +22,6 @@ class NewsItem: NSObject {
     var readed: Bool = false
     var opened: Bool = false
     override init() {
-        id = ""
         title = ""
         detail = ""
         author = ""
