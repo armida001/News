@@ -50,7 +50,7 @@ class NewsListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
                 guard let `self` = self else { return }
                 let resultArray = try response.get()
                 for item in resultArray {
-                    if !self.newsArray.contains(where: {$0.link == item.link}) {
+                    if !self.newsArray.contains(where: { $0.hashId == item.hashId }) {
                         self.newsArray.append(item)
                     }
                 }

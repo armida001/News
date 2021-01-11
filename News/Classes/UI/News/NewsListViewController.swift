@@ -21,6 +21,12 @@ class NewsListViewController: UITableViewController, Storyboarded {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.autoUpdateIfNeed()
+    }
+    
+    //MARK: Reloading
     func autoUpdateIfNeed() {
         let intervalType = UserDefaults.getIntervalType()
         let lastUpdateDate = UserDefaults.getCustomObject(forKey: UserDefaultsKeys.lastUpdate) as? Date
@@ -41,10 +47,5 @@ class NewsListViewController: UITableViewController, Storyboarded {
             self.refreshControl?.endRefreshing()
             UserDefaults.setCustomObject(Date(), forKey: UserDefaultsKeys.lastUpdate)
         }        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.autoUpdateIfNeed()
     }
 }

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = tabBarController
         
-        tabBarController?.handle(launchOptions)
         //TODO: test
         UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
         if let array = (UserDefaults.getCustomObject(forKey: UserDefaultsKeys.selectedResources) as? [ResourceItem]) {
