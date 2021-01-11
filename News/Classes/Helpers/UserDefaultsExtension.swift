@@ -1,9 +1,5 @@
 //
 //  UserDefaultsExtension.swift
-//  GiftClub
-//
-//  Created by iOS Developer on 16/02/2019.
-//  Copyright © 2019 simbirsoft. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,5 @@
 //
 //  ColorExtension.swift
-//  FLAT
-//
-//  Created by Andrey Chernyshev on 15.02.17.
-//  Copyright © 2017 Andrey Chernyshev. All rights reserved.
 //
 
 import UIKit

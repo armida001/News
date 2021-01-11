@@ -2,7 +2,6 @@
 //  NewsUITests.swift
 //  NewsUITests
 //
-//  Created by 1 on 03.01.2021.
 //
 
 import XCTest

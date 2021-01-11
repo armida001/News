@@ -2,7 +2,6 @@
 //  AutoUpdateCell.swift
 //  News
 //
-//  Created by 1 on 09.01.2021.
 //
 
 import Foundation

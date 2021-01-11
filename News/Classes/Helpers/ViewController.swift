@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  News
 //
-//  Created by 1 on 24.11.2020.
-//
 
 import UIKit
 

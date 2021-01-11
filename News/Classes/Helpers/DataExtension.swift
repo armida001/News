@@ -1,9 +1,5 @@
 //
 //  DataExtension.swift
-//  GiftClub
-//
-//  Created by Nikolay Churyanin on 07.02.18.
-//  Copyright © 2018 simbirsoft. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,5 @@
 //
 //  UIImageExtension.swift
-//  GiftClub
-//
-//  Created by Nikolay Churyanin on 26.03.2018.
-//  Copyright © 2018 simbirsoft. All rights reserved.
 //
 
 import UIKit
