@@ -43,22 +43,6 @@ import UIKit
         return obj
     }
     
-    func asDictionary() -> Dictionary<String, AnyObject> {
-        var dict: Dictionary<String, AnyObject> = [:]
-        
-        for name in propertyNames() {
-            if let value = value(forKey: name) {
-                if let obj = value as? NSObject, obj is Entity {
-                    dict[name] = obj.asDictionary() as AnyObject
-                }
-                else {
-                    dict[name] = value as AnyObject
-                }
-            }
-        }
-        
-        return dict
-    }
     
     internal func isInnerObject(selector: String, value: Any) -> NSObject? {
         return nil
