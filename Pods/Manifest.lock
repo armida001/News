@@ -1,0 +1,103 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Branch (0.36.0)
+  - Differentiator (4.0.1)
+  - FeedKit (8.1.1)
+  - Fuse (1.4.0)
+  - Kingfisher (4.10.1)
+  - KissXML (5.3.1):
+    - KissXML/All (= 5.3.1)
+  - KissXML/Additions (5.3.1):
+    - KissXML/Core
+  - KissXML/All (5.3.1):
+    - KissXML/Additions
+    - KissXML/Core
+  - KissXML/Core (5.3.1)
+  - MGSwipeTableCell (1.6.11)
+  - R.swift (5.3.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - Realm (10.1.4):
+    - Realm/Headers (= 10.1.4)
+  - Realm/Headers (10.1.4)
+  - RealmSwift (10.1.4):
+    - Realm (= 10.1.4)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxWebSocket (2.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+    - Starscream (~> 3.0.6)
+  - Starscream (3.0.6)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Branch
+  - FeedKit
+  - Fuse
+  - Kingfisher
+  - KissXML
+  - MGSwipeTableCell
+  - R.swift
+  - RealmSwift
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+  - RxWebSocket
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Branch
+    - Differentiator
+    - FeedKit
+    - Fuse
+    - Kingfisher
+    - KissXML
+    - MGSwipeTableCell
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxWebSocket
+    - Starscream
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Branch: 8aebcb7a6465f19f9f4d315acced369ae078d3f2
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FeedKit: 3418eed25f0b493b205b4de1b8511ac21d413fa9
+  Fuse: 48eaf66d0c407c7f8b0ddb168888dc4637e87f14
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  KissXML: 5c8e0f2e8b9f071d3e1ae123dec3eb5da615c10c
+  MGSwipeTableCell: b804e4e450dee439c42250be90bd50458bf67fce
+  R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
+  RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxWebSocket: 2994bf85e54a6a2a7e224a28a08ea2845a931565
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 71692786b9eaa24eb3250cc8e6d96a651945e375
+
+COCOAPODS: 1.10.0

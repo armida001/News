@@ -6,16 +6,3 @@ xcuserdata/
 
 # Ignore AppCode user-related files
 .idea/
-
-# Ignore CocoaPods installed files
-Pods/
-Pods/Target Support Files/*
-
-# Ignore Carthage installed files
-Carthage/
-
-fastlane/report.xml
-
-fastlane/README.md
-
-Podfile.lock
