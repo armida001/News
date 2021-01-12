@@ -5,16 +5,16 @@
 
 import UIKit
 
-class NewsListViewController: UITableViewController, Storyboarded {
+final class NewsListViewController: UITableViewController, Storyboarded {
     var coordinator: NewsListCoordinator?
-    var dataSource: NewsListDataSource = NewsListDataSource()
+    private var dataSource: NewsListDataSource = NewsListDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = dataSource
-        self.tableView.dataSource = dataSource
-        self.view.backgroundColor = UIColor.white
-        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
+        view.backgroundColor = UIColor.white
+        refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         let intervalType = UserDefaults.getIntervalType()
         if intervalType != AutoUpdateInterval.none {
             refresh(sender: self)
@@ -23,7 +23,7 @@ class NewsListViewController: UITableViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.autoUpdateIfNeed()
+        autoUpdateIfNeed()
     }
     
     //MARK: Reloading
@@ -41,10 +41,10 @@ class NewsListViewController: UITableViewController, Storyboarded {
     
     @objc func refresh(sender: AnyObject) {
         dataSource.newsArray.removeAll()
-        self.tableView.reloadData()
-        dataSource.startParser {
-            self.tableView.reloadData()
-            self.refreshControl?.endRefreshing()
+        tableView.reloadData()
+        dataSource.startParser {[weak self] in
+            self?.tableView.reloadData()
+            self?.refreshControl?.endRefreshing()
             UserDefaults.setCustomObject(Date(), forKey: UserDefaultsKeys.lastUpdate)
         }        
     }

@@ -7,7 +7,7 @@ import Foundation
 import UIKit
 import RxSwift
 
-class NewsListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class NewsListDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     var newsArray: [NewsItem] = [NewsItem]()
     
     //MARK: UITableViewDelegate methods

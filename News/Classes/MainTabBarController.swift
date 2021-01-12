@@ -12,7 +12,7 @@ class MainTabBarController: UITabBarController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         let controllers = [news.navigationController, settings.navigationController]
-        if let items = self.tabBar.items {
+        if let items = tabBar.items {
             for (index,item) in items.enumerated() {
                 controllers[index].tabBarItem = item
             }

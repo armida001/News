@@ -5,9 +5,8 @@
 
 import Foundation
 import UIKit
-import Kingfisher
 
-class ResourceCell: UITableViewCell {
+final class ResourceCell: UITableViewCell {
     static let reusedId = "ResourceCell"
     var item: ResourceItem?
     

@@ -5,7 +5,7 @@
 
 import UIKit
 
-class NewsListCoordinator: Coordinator {
+final class NewsListCoordinator: Coordinator {
     var navigationController: CoordinatedNavigationController
     var storyboardName: String = "News"
     

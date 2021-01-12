@@ -15,23 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        // swiftlint:disable:next force_cast
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)        
         tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController
         
         window?.rootViewController = tabBarController
                 
-        UserDefaults.setCustomObject(nil, forKey: UserDefaultsKeys.lastUpdate)
-        if let array = (UserDefaults.getCustomObject(forKey: UserDefaultsKeys.selectedResources) as? [ResourceItem]) {
-            GlobalDefinition.shared.resourceItems = array
-        } else {
-            //default resources
-            let baseResource = ResourceItem.init(url: "http://lenta.ru/rss")
-            baseResource.isActive = true
-            let baseResource2 = ResourceItem.init(url: "http://www.gazeta.ru/export/rss/lenta.xml")
-            GlobalDefinition.shared.resourceItems = [baseResource, baseResource2]
-            UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)
-        }
+        GlobalDefinition.shared.config()
         return true
     }
 

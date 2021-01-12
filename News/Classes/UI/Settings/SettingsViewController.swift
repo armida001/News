@@ -6,21 +6,21 @@
 import UIKit
 import RxSwift
 
-class SettingsViewController: UITableViewController, Storyboarded {
+final class SettingsViewController: UITableViewController, Storyboarded {
     var coordinator: SettingsCoordinator?
-    var dataSource: SettingsDataSource = SettingsDataSource()
+    private var dataSource: SettingsDataSource = SettingsDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = dataSource
-        self.tableView.dataSource = dataSource
-        dataSource.showIntervalAlert = self.showIntervalAlert
-        dataSource.showAddResourceAlert = self.showAddResourceAlert
-        self.navigationController?.navigationBar.largeContentTitle = "Настройки"
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
+        dataSource.showIntervalAlert = showIntervalAlert
+        dataSource.showAddResourceAlert = showAddResourceAlert
+        navigationController?.navigationBar.largeContentTitle = "Настройки"
         
         for (index,resource) in dataSource.resourcesArray.enumerated() {
             if resource.isActive {
-                self.tableView.selectRow(at: IndexPath.init(row: index, section: 1), animated: false, scrollPosition: UITableView.ScrollPosition.none)
+                tableView.selectRow(at: IndexPath.init(row: index, section: 1), animated: false, scrollPosition: UITableView.ScrollPosition.none)
             }
         }
         
@@ -45,7 +45,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
             }))
         }
         alert.addCancelAction()
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
     
     func showAddResourceAlert() {
@@ -70,7 +70,7 @@ class SettingsViewController: UITableViewController, Storyboarded {
         }))
         
         alertController.addCancelAction()
-        self.present(alertController, animated: true)
+        present(alertController, animated: true)
     }
     
     func verifyUrl (urlString: String?) -> Bool {

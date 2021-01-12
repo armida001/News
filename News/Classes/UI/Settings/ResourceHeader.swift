@@ -7,10 +7,10 @@
 import Foundation
 import UIKit
 
-class ResourceHeader: UITableViewCell {
+final class ResourceHeader: UITableViewCell {
     var showAddResourceAlert: (()->Void)?
     
     @IBAction func addResourceClick(_ sender: Any) {
-        self.showAddResourceAlert?()
+        showAddResourceAlert?()
     }
 }

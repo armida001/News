@@ -11,7 +11,7 @@ enum SectionType: Int {
     case resource
 }
 
-class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     var resourcesArray: [ResourceItem] = GlobalDefinition.shared.resourceItems
     var interval: AutoUpdateInterval = AutoUpdateInterval.none
     var showIntervalAlert: (()->Void)?
@@ -34,7 +34,7 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ResourceHeader") as? ResourceHeader else {
                 return UIView.init(frame: CGRect.zero)
             }
-            cell.showAddResourceAlert = self.showAddResourceAlert
+            cell.showAddResourceAlert = showAddResourceAlert
             return cell
         }
         return UIView.init(frame: CGRect.zero)
@@ -83,7 +83,7 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == SectionType.autoUpdate.rawValue {
-            self.showIntervalAlert?()
+            showIntervalAlert?()
         } else if let cell = tableView.cellForRow(at: indexPath) as? ResourceCell {
             cell.accessoryType = .checkmark
             if let resource = cell.item {
@@ -99,7 +99,8 @@ class SettingsDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .normal, title:  "Удалить", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+        let deleteAction = UIContextualAction(style: .normal, title:  "Удалить", handler: { [weak self] (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            guard let `self` = self else { return }
             self.resourcesArray.remove(at: indexPath.row)
             GlobalDefinition.shared.resourceItems.remove(at: indexPath.row)
             UserDefaults.setCustomObject(GlobalDefinition.shared.resourceItems, forKey: UserDefaultsKeys.selectedResources)

@@ -5,6 +5,6 @@
 
 import UIKit
 
-class CoordinatedNavigationController: UINavigationController {
+final class CoordinatedNavigationController: UINavigationController {
     weak var coordinator: Coordinator?
 }
